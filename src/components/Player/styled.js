@@ -24,6 +24,7 @@ export default withTheme()(styled.div`
       text-align: center;
 
       .Avatar {
+        width: 125px;
         margin-bottom: ${props => props.theme.spacing.unit}px;
         background: ${props =>
           props.player === 1

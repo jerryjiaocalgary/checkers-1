@@ -10,6 +10,7 @@ import Notification from 'components/Notification'
 import StyledGame from './styled'
 import {withNamespaces} from 'react-i18next'
 import {compose, setPropTypes} from 'recompose'
+import CountDownTimer from 'components/CountDownTimer'
 
 function Game({t}) {
   const fadeDelay = {transitionDelay: 700}
@@ -21,16 +22,21 @@ function Game({t}) {
 
       <Zoom in appear style={fadeDelay}>
         <div className="Container">
-          <Board />
-          <Typography
-            variant="caption"
-            color="textSecondary"
-            align="center"
-            component="p"
-            className="Hint"
-          >
-            <span dangerouslySetInnerHTML={hint} />
-          </Typography>
+          <div className="BoardDiv">
+            <Board />
+            <Typography
+              variant="caption"
+              color="textSecondary"
+              align="center"
+              component="p"
+              className="Hint"
+            >
+              <span dangerouslySetInnerHTML={hint} />
+            </Typography>
+          </div>
+          <div className="TimerDiv">
+            <CountDownTimer />
+          </div>
         </div>
       </Zoom>
 
@@ -48,9 +54,6 @@ const propTypes = {
   t: PropTypes.func.isRequired,
 }
 
-const enhance = compose(
-  withNamespaces(),
-  setPropTypes(propTypes),
-)
+const enhance = compose(withNamespaces(), setPropTypes(propTypes))
 
 export default enhance(Game)

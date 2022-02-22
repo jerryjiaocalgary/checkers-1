@@ -35,7 +35,7 @@
     "react-testing-library": "^5.2.0"
   },
   "scripts": {
-    "start": "NODE_PATH=src/ react-scripts start",
+    "start": "react-scripts start",
     "build": "NODE_PATH=src/ react-scripts build",
     "test": "NODE_PATH=src/ react-scripts test --env=jsdom",
     "pretty-quick": "pretty-quick",

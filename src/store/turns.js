@@ -5,6 +5,7 @@ export const passTurn = createAction(PASS_TURN)
 
 const initialState = {
   currentPlayer: 1,
+  timeLimit: 20,
 }
 
 export default function reducer(state = initialState, action) {
@@ -13,6 +14,7 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         currentPlayer: state.currentPlayer === 1 ? 2 : 1,
+        timeLimit: 20,
       }
     }
     default:

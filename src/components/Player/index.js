@@ -38,13 +38,13 @@ function Player({
         style={playerTransitionStyle}
       >
         <div className="Box Header">
-          <Avatar className="Avatar">N</Avatar>
+          <Avatar className="Avatar">{player === 1 ? 'Champ' : 'King'}</Avatar>
           <div className="Info">
             <Typography color="inherit" variant="subtitle2" component="p">
               {tPlayer}
             </Typography>
             <Typography color="inherit" variant="h5" component="p">
-              Nameless
+              {player === 1 ? 'Jordan' : 'Arthur'}
             </Typography>
           </div>
         </div>
@@ -154,9 +154,6 @@ const propTypes = {
   t: PropTypes.func.isRequired,
 }
 
-const enhance = compose(
-  setPropTypes(propTypes),
-  pure,
-)
+const enhance = compose(setPropTypes(propTypes), pure)
 
 export default enhance(Player)

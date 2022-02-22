@@ -5,8 +5,7 @@ export default withTheme()(styled.div`
   overflow: hidden;
 
   .Container {
-    margin: 16px auto;
-    max-width: 560px;
+    margin: 16px auto;    
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -19,5 +18,23 @@ export default withTheme()(styled.div`
       text-align: center;
       text-transform: uppercase;
     }
-  }
+
+    .BoardDiv {
+      max-width: 560px;
+      width: 65%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .TimerDiv {
+      max-width: 330px;
+      width 35%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+  } 
 `)
